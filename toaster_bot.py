@@ -8,9 +8,14 @@ import thread
 import re
 from config import *
 
+global state
+global votingDict
+global irc
 
+	
 def voteTimer():
-	sleep(20)
+	sleep(5)
+	global state
 	state = 0
 	irc.send(CHAN,"Voting has ended!")
 	
