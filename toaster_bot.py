@@ -58,7 +58,7 @@ while 1:
 					irc.send(CHAN,"Voting has begun! Votes should look like: '!vote 123'")
 					thread.start_new_thread(voteTimer, ())
 					
-				if command == "result\r\n":
+				if "result" in command:
 					state = 0
 					result = re.findall(r"[0-9]+",command)[0]
 					print(result)
